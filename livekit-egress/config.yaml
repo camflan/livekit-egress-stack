@@ -1,0 +1,20 @@
+---
+log_level: debug
+api_key: devkey
+api_secret: secret
+ws_url: ws://livekit:7880
+insecure: true
+
+redis:
+  address: redis:6379
+
+# room_only: false
+# web_only: false
+# track_composite_only: false
+# track_only: false
+# file_only: false
+# stream_only: false
+# segments_only: false
+# muting: false
+# dot_files: false
+# short: false

@@ -1,0 +1,11 @@
+{
+  "url": "https://videojs.github.io/autoplay-tests/plain/attr/autoplay-playsinline.html",
+  "preset": 2,
+  "stream_outputs": [
+    {
+      "urls": [
+        "rtmps://SOME_ID.global-contribute.live-video.net:443/app/MY_STREAM_KEY"
+      ]
+    }
+  ]
+}
