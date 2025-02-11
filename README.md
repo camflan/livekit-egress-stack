@@ -2,12 +2,15 @@
 
 ## Requirements
 
-- Docker & docker compose
+- [Docker](https://docker.com)
 - [Livekit-cli](https://github.com/livekit/livekit-cli)
 
 ## Running
 
-1. Copy `.env.local.example` to `.env.local`
+1. Copy `.env.local.example` to `.env.local`. [^1]
+
+[^1]: I use [`mise`](https://mise.jdx.dev/) to load environment variables from `.env.local` into my shell, [`direnv`](https://direnv.net/) or [similar](https://gist.github.com/camflan/e94492b44701c1e5282a93ec124711ca) will also work.
+
 1. Start stack
 
     ```bash
