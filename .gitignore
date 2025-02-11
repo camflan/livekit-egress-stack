@@ -1,0 +1,16 @@
+# -- ignore everything by default --------------------------------------
+*
+
+# -- include these files -----------------------------------------------
+!.env.local.example
+!.gitignore
+
+!README.md
+!docker-compose.yml
+
+# Egress
+!livekit-egress/config.yaml
+!livekit-egress/web-egress.example.json
+
+# Server
+!livekit-server/config.yaml
