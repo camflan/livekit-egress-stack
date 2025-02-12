@@ -8,10 +8,6 @@ script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd -P)
 # How often to check egress for status changes
 EGRESS_MONITOR_HEARTBEAT_SECONDS=10
 
-# Egress Preset. 2=1080p 30fps
-# Other configuration is possible by manually editing the config in `start_stream` fn
-EGRESS_QUALITY_PRESET=2
-
 # Capture egress ids here so we can stop them
 ACTIVE_EGRESS_IDS=()
 
