@@ -106,7 +106,7 @@ get_or_create_project ()
         lk project add $project_name \
             --api-key=$LIVEKIT_API_KEY \
             --api-secret=$LIVEKIT_API_SECRET \
-            --url=$LIVEKIT_WS_URL \
+            --url=$LIVEKIT_URL \
             --default
     else
         project_name=$(echo $projects | jq -r '.|arrays | .[0].Name')
@@ -128,7 +128,18 @@ start_stream () {
     cat << EOF > $tmpfile
 {
   "url": "$_source",
-  "preset": $EGRESS_QUALITY_PRESET,
+  "advanced": {
+    "width": 1920,
+    "height": 1080,
+    "depth": 24,
+    "framerate": 30,
+    "key_frame_interval": 2,
+    "video_bitrate": 8500,
+    "video_codec": "H264_MAIN",
+    "audio_bitrate": 320,
+    "audio_codec": "AAC",
+    "audio_frequency": 48000
+  },
   "stream_outputs": [
     {
       "urls": [ "$_destination" ]
