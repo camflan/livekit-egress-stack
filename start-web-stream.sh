@@ -5,11 +5,15 @@ trap cleanup SIGINT SIGTERM ERR EXIT
 
 script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd -P)
 
+# How often to check egress for status changes
 EGRESS_MONITOR_HEARTBEAT_SECONDS=10
 
-ACTIVE_EGRESS_IDS=()
+# Egress Preset. 2=1080p 30fps
+# Other configuration is possible by manually editing the config in `start_stream` fn
+EGRESS_QUALITY_PRESET=2
 
-PARAMS=$@
+# Capture egress ids here so we can stop them
+ACTIVE_EGRESS_IDS=()
 
 usage() {
   cat << EOF # remove the space between << and EOF, this is due to web plugin issue
@@ -124,7 +128,7 @@ start_stream () {
     cat << EOF > $tmpfile
 {
   "url": "$_source",
-  "preset": 2,
+  "preset": $EGRESS_QUALITY_PRESET,
   "stream_outputs": [
     {
       "urls": [ "$_destination" ]
