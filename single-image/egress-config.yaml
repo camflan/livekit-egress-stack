@@ -1,0 +1,20 @@
+---
+log_level: debug
+api_key: devkey
+api_secret: secret
+ws_url: ws://127.0.0.1:7881
+insecure: true
+
+redis:
+  address: 127.0.0.1:6379
+
+# room_only: false
+# web_only: false
+# track_composite_only: false
+# track_only: false
+# file_only: false
+# stream_only: false
+# segments_only: false
+# muting: false
+# dot_files: false
+# short: false

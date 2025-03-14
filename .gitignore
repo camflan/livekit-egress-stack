@@ -1,5 +1,5 @@
 # -- ignore everything by default --------------------------------------
-*
+/*
 
 # -- include these files -----------------------------------------------
 !.env.local.example
@@ -15,3 +15,6 @@
 
 # Server
 !livekit-server/config.yaml
+
+# Single stack
+!single-image/
